@@ -1,0 +1,10 @@
+Speaker 1: Bom dia pessoal, vamos começar a reunião.
+Speaker 2: Bom dia! Tudo certo.
+Speaker 1: O objetivo de hoje é alinhar as prioridades da sprint.
+Speaker 2: Precisamos finalizar a integração com o Notion até sexta.
+Speaker 1: Combinado. Quem fica responsável?
+Speaker 2: Eu assumo essa task.
+Speaker 1: Perfeito. Mais alguma coisa?
+Speaker 2: Acho que precisamos revisar o fluxo de autenticação também.
+Speaker 1: Ok, vou criar uma task para isso. Prioridade média.
+Speaker 2: Fechado. Obrigado!

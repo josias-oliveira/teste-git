@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: meet-to-notion
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_REFRESH_TOKEN
+        sync: false
+      - key: GOOGLE_DRIVE_FOLDER_ID
+        sync: false
+      - key: GOOGLE_AI_API_KEY
+        sync: false
+      - key: AI_PROVIDER
+        value: google
+      - key: NOTION_TOKEN
+        sync: false
+      - key: NOTION_MEETING_RECORDINGS_DB_ID
+        sync: false
+      - key: NOTION_TAREFAS_DB_ID
+        sync: false
+      - key: CRON_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /health
+    autoDeploy: true
+
+  # Cron configurado externamente via cron-job.org ou claude.ai Routines
+  # POST https://meet-to-notion.onrender.com/cron/process
+  # Header: Authorization: Bearer <CRON_SECRET>

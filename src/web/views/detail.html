@@ -1,0 +1,22 @@
+<p style="margin-bottom:16px"><a href="/dashboard">&larr; Voltar ao Dashboard</a></p>
+
+<h2 style="margin-bottom:16px">Run #{{RUN_ID}} {{STATUS_BADGE}}</h2>
+
+<div class="card">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center">
+    <div><div style="font-size:24px;font-weight:700">{{FILES_FOUND}}</div><div style="font-size:12px;color:var(--muted)">encontrados</div></div>
+    <div><div style="font-size:24px;font-weight:700">{{FILES_PROCESSED}}</div><div style="font-size:12px;color:var(--muted)">processados</div></div>
+    <div><div style="font-size:24px;font-weight:700">{{FILES_SKIPPED}}</div><div style="font-size:12px;color:var(--muted)">pulados</div></div>
+    <div><div style="font-size:24px;font-weight:700;color:{{FILES_ERRORED}} > 0 ? var(--red) : inherit">{{FILES_ERRORED}}</div><div style="font-size:12px;color:var(--muted)">erros</div></div>
+  </div>
+  <div style="margin-top:12px;font-size:12px;color:var(--muted)">
+    Início: {{STARTED_AT}} | Fim: {{FINISHED_AT}}
+  </div>
+</div>
+
+{{RUN_ERROR}}
+
+<h3 style="margin:16px 0 8px">Arquivos processados</h3>
+
+{{FILES}}
+{{NO_FILES}}
